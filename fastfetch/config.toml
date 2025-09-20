@@ -1,0 +1,7 @@
+[general]
+show_kernel = false
+show_uptime = false
+show_packages = false
+show_memory = false
+show_cores = false
+show_resolution = false
