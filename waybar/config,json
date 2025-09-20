@@ -1,0 +1,68 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin": "5 10 0",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 30,
+  "modules-left": ["custom/logo", "hyprland/workspaces#numbers"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "tray", "custom/pacman"],
+  "custom/logo": {
+    "format": "<span color='white' size='x-large'></span>",
+    "tooltip": false,
+    "on-click": "rofi -show drun &"
+  },
+  "hyprland/workspaces#numbers": {
+    "format": "{name}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "clock": {
+    "format": "{:%d %B %Y}",
+    "format-alt": "{:%I:%M %p}",
+    "tooltip": false,
+    "min-length": 6,
+    "on-click": "toggle"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "tooltip": false,
+    "format-muted": " muted",
+    "on-click": "~/.config/waybar/scripts/volume.sh --toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["","",""]
+    }
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "custom/pacman": {
+    "format": "<span size='large'>{icon}</span>{}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": " ",
+      "updated": ""
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
+  }
+}
