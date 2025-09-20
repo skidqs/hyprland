@@ -1,0 +1,205 @@
+configuration {
+    modi: "drun,run,filebrowser";
+    show-icons: true;
+    display-drun: "  apps";
+    display-run: "  term";
+    display-filebrowser: "  files";
+    display-window: "  window";
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 40%;
+    x-offset: 0px;
+    y-offset: 0px;
+    enabled: true;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    cursor: "default";
+    background-color: #000000;
+}
+
+mainbox {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #000000;
+    children: [ "inputbar", "custombox" ];
+}
+
+custombox {
+    spacing: 0px;
+    background-color: #000000;
+    text-color: #FFFFFF;
+    orientation: horizontal;
+    children: [ "mode-switcher", "listview" ];
+}
+
+inputbar {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #000000;
+    text-color: #FFFFFF;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled: true;
+    padding: 5px 5px;
+    expand: false;
+    str: " ";
+    background-color: #000000;
+    text-color: #FFFFFF;
+    font: "JetBrainsMono Nerd Font Bold 14";
+}
+
+entry {
+    enabled: true;
+    padding: 5px 0px;
+    background-color: #000000;
+    text-color: #000000;
+    cursor: text;
+    placeholder: "Search...";
+    placeholder-color: #FFFFFF;
+}
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 6;
+    cycle: true;
+    dynamic: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 5px;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: #000000;
+    text-color: #FFFFFF;
+    cursor: default;
+}
+
+element {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: #000000;
+    text-color: #FFFFFF;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element normal.urgent {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element normal.active {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element-text selected,
+element selected.normal {
+    background-color: #FFFFFF;
+    text-color: #000000;
+}
+
+element selected.urgent {
+    background-color: #FFFFFF;
+    text-color: #000000;
+}
+
+element selected.active {
+    background-color: #FFFFFF;
+    text-color: #000000;
+}
+
+element alternate.normal {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element alternate.urgent {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element alternate.active {
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+element-icon {
+    background-color: #000000;
+    text-color: #FFFFFF;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: #000000;
+    text-color: #FFFFFF;
+    highlight: #FFFFFF;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+mode-switcher {
+    enabled: true;
+    expand: false;
+    orientation: vertical;
+    spacing: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: #000000;
+    text-color: #FFFFFF;
+}
+
+button {
+    padding: 0px 20px;
+    border-radius: 8px;
+    background-color: #000000;
+    text-color: #FFFFFF;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    cursor: pointer;
+}
+
+button selected {
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    text-color: #000000;
+}
+
+textbox {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #000000;
+    text-color: #000000;
+    highlight: #000000;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    placeholder-color: #FFFFFF;
+}
