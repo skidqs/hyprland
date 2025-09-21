@@ -18,3 +18,6 @@ Includes themes, fonts, keybindings, Waybar configuration, and automation script
 ![Hyprland Screenshot 1](screenshots/screenshot1.png)  
 
 ---
+
+## License
+This repository is licensed under the [MIT License](LICENSE).
