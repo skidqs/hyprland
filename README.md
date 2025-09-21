@@ -21,3 +21,5 @@ Includes themes, fonts, keybindings, Waybar configuration, and automation script
 
 ## License
 This repository is licensed under the [MIT License](LICENSE).
+
+---
