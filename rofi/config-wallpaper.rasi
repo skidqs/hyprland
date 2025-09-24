@@ -2,6 +2,8 @@
 
 configuration {
   modi: "drun";
+  display-drun: "";
+  mouse-nav: true;
 }
 
 window {
@@ -9,15 +11,18 @@ window {
   height: inherit;
 }
 
+/** Override the prompt to be empty **/
+prompt {
+  enabled: false;
+}
+
 mainbox {
-  children:
-    [ "inputbar", "listview"];
+  children: [ "inputbar", "listview"];
 }
 
 entry {
   expand: true;
   placeholder: " Search / Choose Wallpaper";
-  horizontal-align: 0.5;
   horizontal-align: 0.5;
 }
 
@@ -26,8 +31,6 @@ listview {
   lines: 2;
   spacing: 20px;
   padding: 10px;
-  columns: 6;
-  lines: 2;
   flow: horizontal;
   fixed-width: true;
   fixed-height: true;
@@ -39,19 +42,26 @@ element {
   padding: 0px;
   spacing: 0px;
   border-radius: 10px;
-  padding: 0px;
   margin: 0px;
 }
 
 element selected.normal {
   background-color: transparent;
+  text-color: #FFFFFFFF;
+  font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+element selected.active {
+  background-color: transparent;
+  text-color: #FFFFFFFF;
+  font: "JetBrainsMono Nerd Font Bold 12";
 }
 
 element-icon {
-    text-color:                  inherit;
-    size:                        10%;
-    margin:                      -30px;
-    cursor:                      inherit;
+    text-color: inherit;
+    size: 10%;
+    margin: -30px;
+    cursor: inherit;
 }
 
 element-text {
@@ -59,4 +69,6 @@ element-text {
   horizontal-align: 0.5;
   padding: 6px;
   margin: 6px;
+  text-color: inherit;
+  font: inherit;
 }
