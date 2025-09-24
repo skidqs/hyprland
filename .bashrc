@@ -29,3 +29,4 @@ function set_prompt {
 }
 
 PROMPT_COMMAND=set_prompt
+export PATH="$HOME/.local/bin:$PATH"
