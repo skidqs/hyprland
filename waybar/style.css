@@ -13,11 +13,6 @@ window#waybar {
     color: white;
 }
 
-tooltip {
-    background: #010409;
-    border-radius: 10px;
-}
-
 #custom-logo {
     padding: 0 5px;
     margin-left: 0px;
@@ -55,10 +50,6 @@ tooltip {
 #pulseaudio {
     color: white;
     padding: 0px 10px;
-}
-
-#tray {
-    margin-right: 10px;
 }
 
 #custom-pacman {
