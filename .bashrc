@@ -15,9 +15,9 @@ function set_prompt {
         fi
     fi
 
-    local LEFT="\[\e[1m\][\u@\h ${DIR}]\$ \[\e[0m\]"
+    local LEFT="\[\e[1;97m\][\u@\h ${DIR}]\[\e[0m\]\[\e[97m\]\$ \[\e[0m\]"
 
-    local DATE_TIME="\[\e[1m\]$(date +'%I:%M %p %d/%m/%Y' | tr '[:lower:]' '[:upper:]')\[\e[0m\]"
+    local DATE_TIME="\[\e[1;97m\]$(date +'%I:%M %p %d/%m/%Y' | tr '[:lower:]' '[:upper:]')\[\e[0m\]"
 
     local LEFT_VISIBLE="[${USER}@${HOSTNAME} ${DIR}]\$ "
     local RIGHT_VISIBLE="$(date +'%I:%M %p %d/%m/%Y' | tr '[:lower:]' '[:upper:]')"
