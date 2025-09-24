@@ -9,7 +9,7 @@
   "height": 30,
   "modules-left": ["custom/logo", "hyprland/workspaces#numbers"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "tray", "custom/pacman"],
+  "modules-right": ["pulseaudio", "custom/pacman"],
   "custom/logo": {
     "format": "<span color='white' size='x-large'></span>",
     "tooltip": false,
@@ -50,10 +50,6 @@
       "car": "",
       "default": ["","",""]
     }
-  },
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10
   },
   "custom/pacman": {
     "format": "<span size='large'>{icon}</span>{}",
